@@ -1,5 +1,5 @@
 ---
-title: "Estado del Covid en Costa Rica"
+title: "Resultados del primer conteo de monos Costa Rica 2021"
 author: "Kevin Chavarría"
 output:
   flexdashboard::flex_dashboard:
