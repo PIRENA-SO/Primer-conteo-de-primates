@@ -119,28 +119,53 @@ valueBox(value = paste(sum(df$Total)),
 
 Row {data-height=800}
 -----------------------------------------------------------------------
-### Casos en distritos
+### Distribución espacial de registros
 ```{r}
-# Mapa de calor
+leaflet(df) %>%
+  fitBounds(lng1 = -86, lng2 = -82, lat1 = 8, lat2 = 11) %>%
+  addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
+  addProviderTiles(providers$Stamen.TonerLite, group = "Stamen Toner Lite") %>%
+  addProviderTiles(providers$CartoDB.DarkMatter, group = "CartoDB DarkMatter") %>%
+  addMarkers(clusterOptions = markerClusterOptions(),
+             group = "Registros",
+             popup = paste("Nombre común: ", df$Nombre.común, "<br>",
+                      "Total de registros: ", df$Total, "<br>",
+                      "Nombre científico: ", df$Especie, "<br>")) %>%
+  addLayersControl(baseGroups = c("OpenStreetMap", "Stamen Toner Lite", "CartoDB DarkMatter"),
+    overlayGroups = "Registros",
+    options = layersControlOptions(collapsed = TRUE)) 
+```
 
+Row {data-height=600}
+-----------------------------------------------------------------------
+
+### Tabla de información 
+```{r}
+df %>%
+  select(Especie = Especie, Nombre_común = Nombre.común, Sitio = Lugar, Registros = Total) %>%
+  DT::datatable(rownames = FALSE,
+                options = list(searchHighlight = TRUE, 
+                               language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json')
+                ))
+```
+
+Row {data-height=400}
+-----------------------------------------------------------------------
+
+### Mapa cloropletas
+```{r}
 
 ```
+
+### Gráfico
+```{r}
+
 ```
 
-Pagina 2
+
+Proximamente
 =======================================================================
-Row {data-height=1}
+Row {data-height=400}
 -----------------------------------------------------------------------
-### Última actualización de datos realizada el `r  ` texto.
+### Conteo de primates 2022
 
-
-Row
------------------------------------------------------------------------
-
-### espacio {.value-box}
-```{r}
-
-```
-
-Row {data-width=400}
------------------------------------------------------------------------
