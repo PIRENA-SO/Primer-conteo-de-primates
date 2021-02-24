@@ -23,12 +23,19 @@ library(leaflet)
 library(leaflet.extras)
 #-------------------- Archivos necesarios ---------------------
 
+
 datos <- "https://raw.githubusercontent.com/Kevinchaes/Primer-conteo-de-primates/master/files/Avistamientos_PrimatesCR.csv"
 
-df <- read.csv(datos)
+distritos <- read_sf("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\distritos.shp")
 
-shape <-st_read("SHP/Conteo_primates_CR.shp")
+capa <- read_sf("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\Conteo_primates_CR.shp")
 
+dato <- read.csv("~/R/Primer-conteo-de-primates/files/datos.csv")
+
+# Objeto sf de monos en cantones en la última fecha
+sf_datos <-
+  left_join(distritos, dato, by = c('cod_canton')) %>%
+  arrange(desc(Total))
 
 #--------------- Otros parámetros -----------------
 
@@ -121,19 +128,33 @@ Row {data-height=800}
 -----------------------------------------------------------------------
 ### Distribución espacial de registros
 ```{r}
-leaflet(df) %>%
+leaflet(dato) %>%
   fitBounds(lng1 = -86, lng2 = -82, lat1 = 8, lat2 = 11) %>%
   addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
   addProviderTiles(providers$Stamen.TonerLite, group = "Stamen Toner Lite") %>%
   addProviderTiles(providers$CartoDB.DarkMatter, group = "CartoDB DarkMatter") %>%
   addMarkers(clusterOptions = markerClusterOptions(),
              group = "Registros",
-             popup = paste("Nombre común: ", df$Nombre.común, "<br>",
-                      "Total de registros: ", df$Total, "<br>",
-                      "Nombre científico: ", df$Especie, "<br>")) %>%
+             popup = paste(
+               "Especie: ", dato$Especie, "<br>",
+               "Nombre común: ", dato$Nombre_com, "<br>",
+               "Registros: ", dato$Total, "<br>")) %>%
+  addPolygons(
+    data = sf_datos,
+    stroke=T, fillOpacity = 0,
+    color="black", weight=0.2, opacity= 1.0,
+    group = "Registros por distritos",
+    popup = paste(
+      "Provincia: ", sf_datos$provincia.x, "<br>",
+      "Cantón: ", sf_datos$canton.x, "<br>",
+      "Distrito: ", sf_datos$distrito, "<br>",
+      "Especie: ", sf_datos$Especie, "<br>",
+      "Nombre común: ", sf_datos$Nombre_com, "<br>",
+      "Registros: ", sf_datos$Total, "<br>")) %>%
   addLayersControl(baseGroups = c("OpenStreetMap", "Stamen Toner Lite", "CartoDB DarkMatter"),
-    overlayGroups = "Registros",
-    options = layersControlOptions(collapsed = TRUE)) 
+                   overlayGroups = c("Registros","Registros por distritos"),
+                   options = layersControlOptions(collapsed = TRUE))  %>%
+  hideGroup("Registros por distritos") 
 ```
 
 Row {data-height=600}
