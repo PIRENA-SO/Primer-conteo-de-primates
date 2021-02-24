@@ -1,27 +1,40 @@
 ---
-title: "Resultados del primer conteo de monos Costa Rica 2021"
-author: "Kevin Chavarría"
+title: "Primer conteo de primates Costa Rica"
+author: ""
 output:
   flexdashboard::flex_dashboard:
     orientation: rows
     vertical_layout: scroll
+    navbar:
+        - { icon: "fab fa-facebook-f", href: "https://www.facebook.com/groups/1089060534898714", align: right }
+    source_code: https://github.com/Kevinchaes/Primer-conteo-de-primates.git
 ---
 
 ```{r setup, include=FALSE}
 
 #-------------------- Paquetes --------------------
-
+library(flexdashboard)
+library(tidyverse)
+library(plotly)
+library(dplyr)
+library(tidyr)
+library(sf)
+library(leaflet)
+library(leaflet.extras)
 #-------------------- Archivos necesarios ---------------------
 
+datos <- "https://raw.githubusercontent.com/Kevinchaes/Primer-conteo-de-primates/master/files/Avistamientos_PrimatesCR.csv"
 
+df <- read.csv(datos)
 
-#--------------------- Íconos ---------------------
-
+shape <-st_read("SHP/Conteo_primates_CR.shp")
 
 
 #--------------- Otros parámetros -----------------
 
-
+ucr <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/UCR.PNG"
+acoprico <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/ACOPRICO.jpeg"
+madeso <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/firma%20madeso.PNG"
 ```
 
 
@@ -30,62 +43,88 @@ output:
 
 ```
 
-Pagina 1
+2021
 =======================================================================
-Row {data-height=1.5}
+Column {.sidebar}
 -----------------------------------------------------------------------
     
-### encabezado `r  ` texto.
-    
-```{r, include=FALSE}
+### Desarrollado por:
+
+```{r, out.width = '100%'}
+knitr::include_graphics("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\files\\UCR.PNG")
+
 ```
+
+```{r, out.width = '100%'}
+knitr::include_graphics("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\files\\Sede Occidente.PNG")
+
+```
+
+```{r, out.width = '100%'}
+knitr::include_graphics("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\files\\firma madeso.PNG")
+
+```
+
+```{r, out.width = '100%'}
+knitr::include_graphics("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\files\\ACOPRICO.jpeg")
+
+```
+
+Autoria: 
+
+Liz Brenes Cambronero
+
+Ronald Sánchez Porras
+
+Inés Azofeifa Rojas
+
+Michel Moya Calderón
+
+Allan Loria
+
+Kevin Chavarria Esquivel
 
 Row 
 -----------------------------------------------------------------------
-###  espacio 1 {.value-box}
+###  Participantes {.value-box}
 ```{r}
 
+valueBox(value = 100, 
+         caption = "Total de participantes",
+         icon = "fas fa-binoculars",
+         color = "#3065ab"
+)
 
 ```
 
-### espacio 2 {.value-box}
+### Registrados {.value-box}
 ```{r}
-
+valueBox(value = 100, 
+         caption = "Total de participantes registrados",
+         icon = "fas fa-list",
+         color = "#4984d1"
+)
 
 ```
 
-### espacio 3 {.value-box}
+### Registros {.value-box}
 ```{r}
-
-```
-
-Row
------------------------------------------------------------------------
-### espacio 4 {.value-box}
-```{r}
-
-```
-
-### espacio {.value-box}
-```{r}
-
-```
-
-### espacio {.value-box}
-```{r}
-
-```
-
-### espacio 
-```{r}
+valueBox(value = paste(sum(df$Total)), 
+         caption = "Total de registros de especies",
+         icon = "fas fa-laptop",
+         color = "#68a6f7"
+)
 
 ```
 
 Row {data-height=800}
 -----------------------------------------------------------------------
-
-### Tabla de datos
+### Casos en distritos
 ```{r}
+# Mapa de calor
+
+
+```
 ```
 
 Pagina 2
