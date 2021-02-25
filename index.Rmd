@@ -3,16 +3,19 @@ title: "Primer conteo de primates Costa Rica"
 author: ""
 output:
   flexdashboard::flex_dashboard:
+    theme: yeti
     orientation: rows
     vertical_layout: scroll
     navbar:
         - { icon: "fab fa-facebook-f", href: "https://www.facebook.com/groups/1089060534898714", align: right }
+        - { icon: "fas fa-leaf", href: "https://www.inaturalist.org/projects/conteo-nacional-de-primates-costa-rica", align: right}
     source_code: https://github.com/Kevinchaes/Primer-conteo-de-primates.git
 ---
 
 ```{r setup, include=FALSE}
 
 #-------------------- Paquetes --------------------
+library(icon)
 library(flexdashboard)
 library(tidyverse)
 library(plotly)
@@ -21,33 +24,44 @@ library(tidyr)
 library(sf)
 library(leaflet)
 library(leaflet.extras)
-#-------------------- Archivos necesarios ---------------------
+library(pryr)
+library(rgdal)
+library(rmapshaper)
+library(geojsonio)
+
+```
 
 
-datos <- "https://raw.githubusercontent.com/Kevinchaes/Primer-conteo-de-primates/master/files/Avistamientos_PrimatesCR.csv"
+```{r, include=FALSE}
+#--------------- Archivos de datos ----------------
+distritos <- st_read('https://raw.githubusercontent.com/pf0953-programaciongeoespacialr-2020/datos/master/delimitacion-territorial-administrativa/cr/ign/cr_limite_distrital_ign_wgs84.geojson')
 
-distritos <- read_sf("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\distritos.shp")
+capa <- st_read("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\Conteo_primates_CR.shp")
 
-capa <- read_sf("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\Conteo_primates_CR.shp")
 
-dato <- read.csv("~/R/Primer-conteo-de-primates/files/datos.csv")
+datos <- read.csv("~/R/Primer-conteo-de-primates/files/datos.csv")
 
-# Objeto sf de monos en cantones en la última fecha
-sf_datos <-
-  left_join(distritos, dato, by = c('cod_canton')) %>%
-  arrange(desc(Total))
+sf_datos <- left_join(distritos, datos, by= c("provincia", "canton", "distrito")) %>%
+  drop_na()
+
+
+cara_blanca <- datos %>%
+  filter(Especie == "Cebus  imitator")
+
+araña <- datos %>%
+  filter(Especie == "Ateles geoffroyi")
+
+titi <- datos %>%
+  filter(Especie == "Saimiri oerstedii")
+
+congo <- datos %>%
+  filter(Especie == "Alouatta palliata")
 
 #--------------- Otros parámetros -----------------
 
 ucr <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/UCR.PNG"
 acoprico <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/ACOPRICO.jpeg"
 madeso <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/firma%20madeso.PNG"
-```
-
-
-```{r, include=FALSE}
-#--------------- Archivos de datos ----------------
-
 ```
 
 2021
@@ -91,6 +105,10 @@ Allan Loria
 
 Kevin Chavarria Esquivel
 
+Row {data-height=5}
+-----------------------------------------------------------------------
+### Participación en conteo
+
 Row 
 -----------------------------------------------------------------------
 ###  Participantes {.value-box}
@@ -116,7 +134,7 @@ valueBox(value = 100,
 
 ### Registros {.value-box}
 ```{r}
-valueBox(value = paste(sum(df$Total)), 
+valueBox(value = paste(sum(datos$Total)), 
          caption = "Total de registros de especies",
          icon = "fas fa-laptop",
          color = "#68a6f7"
@@ -124,11 +142,64 @@ valueBox(value = paste(sum(df$Total)),
 
 ```
 
+Row {data-height=5}
+-----------------------------------------------------------------------
+### Registros por especies de monos
+
+Row
+-----------------------------------------------------------------------
+
+### Mono titi {.value-box}
+```{r}
+valueBox(value = paste(sum(titi$Total)), 
+         caption = "Mono tití",
+         icon = "",
+         color = "#a1ceed",
+         href = "https://www.inaturalist.org/taxa/43425-Saimiri-oerstedii"
+)
+
+```
+
+### Mono araña {.value-box}
+```{r}
+valueBox(value = paste(sum(araña$Total)), 
+         caption = "Mono araña",
+         icon = "",
+         color = "#779eba",
+         href = "https://www.inaturalist.org/taxa/43411-Ateles-geoffroyi"
+)
+
+```
+
+### Mono cara blanca {.value-box}
+```{r}
+valueBox(value = paste(sum(cara_blanca$Total)), 
+         caption = "Mono cara blanca",
+         icon = "",
+         color = "#507a99",
+         href = "https://www.inaturalist.org/taxa/43432-Cebus-capucinus"
+)
+
+```
+
+### Mono congo {.value-box}
+```{r}
+valueBox(value = paste(sum(congo$Total)), 
+         caption = "Mono congo",
+         icon = "",
+         color = "#3d6e91",
+         href = "https://www.inaturalist.org/taxa/43436-Alouatta-palliata"
+)
+
+```
+
+
+
 Row {data-height=800}
 -----------------------------------------------------------------------
 ### Distribución espacial de registros
 ```{r}
-leaflet(dato) %>%
+leaflet(datos) %>%
   fitBounds(lng1 = -86, lng2 = -82, lat1 = 8, lat2 = 11) %>%
   addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
   addProviderTiles(providers$Stamen.TonerLite, group = "Stamen Toner Lite") %>%
@@ -136,25 +207,37 @@ leaflet(dato) %>%
   addMarkers(clusterOptions = markerClusterOptions(),
              group = "Registros",
              popup = paste(
-               "Especie: ", dato$Especie, "<br>",
-               "Nombre común: ", dato$Nombre_com, "<br>",
-               "Registros: ", dato$Total, "<br>")) %>%
+               "Especie: ", datos$Especie, "<br>",
+               "Nombre común: ", datos$Nombre_com, "<br>",
+               "Registros: ", datos$Total, "<br>",
+               "Provincia: ", datos$provincia, "<br>",
+               "Cantón: ", datos$canton, "<br>",
+               "Distrito: ", datos$distrito, "<br>")) %>%
   addPolygons(
     data = sf_datos,
     stroke=T, fillOpacity = 0,
-    color="black", weight=0.2, opacity= 1.0,
-    group = "Registros por distritos",
+    color="red", weight=0.3, opacity= 2.0,
+    group = "Distritos con registros",
     popup = paste(
-      "Provincia: ", sf_datos$provincia.x, "<br>",
-      "Cantón: ", sf_datos$canton.x, "<br>",
+      "Provincia: ", sf_datos$provincia, "<br>",
+      "Cantón: ", sf_datos$canton, "<br>",
       "Distrito: ", sf_datos$distrito, "<br>",
       "Especie: ", sf_datos$Especie, "<br>",
       "Nombre común: ", sf_datos$Nombre_com, "<br>",
       "Registros: ", sf_datos$Total, "<br>")) %>%
+  addHeatmap(data = datos,
+    lng = ~longitude, lat = ~latitude, intensity = ~Total,
+    blur = 10, max = max(datos$Total), radius = 15,
+    group = "Densidad") %>%
   addLayersControl(baseGroups = c("OpenStreetMap", "Stamen Toner Lite", "CartoDB DarkMatter"),
-                   overlayGroups = c("Registros","Registros por distritos"),
+                   overlayGroups = c("Registros","Distritos con registros", "Densidad"),
                    options = layersControlOptions(collapsed = TRUE))  %>%
-  hideGroup("Registros por distritos") 
+  addScaleBar() %>%
+  hideGroup(c("Distritos con registros", "Densidad")) %>%
+   addMiniMap(
+    toggleDisplay = TRUE,
+    position = "bottomleft",
+    tiles = providers$OpenStreetMap.Mapnik)
 ```
 
 Row {data-height=600}
@@ -162,8 +245,8 @@ Row {data-height=600}
 
 ### Tabla de información 
 ```{r}
-df %>%
-  select(Especie = Especie, Nombre_común = Nombre.común, Sitio = Lugar, Registros = Total) %>%
+datos %>%
+  select(Especie = Especie, "Nombre común" = Nombre_com, Registros = Total, Provincia = provincia, Cantón = canton, Distrito = distrito, Sitio = Lugar) %>%
   DT::datatable(rownames = FALSE,
                 options = list(searchHighlight = TRUE, 
                                language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json')
@@ -183,10 +266,10 @@ Row {data-height=400}
 
 ```
 
-
 Proximamente
 =======================================================================
 Row {data-height=400}
 -----------------------------------------------------------------------
 ### Conteo de primates 2022
+
 
