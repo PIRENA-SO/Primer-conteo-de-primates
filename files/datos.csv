@@ -19,7 +19,6 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 585883.7271,955617.4925,Saimiri oerstedii,No,Mono Tití,1,"Puntarenas, CR",8.641727,-83.219638,iNaturalist,Si,6,6,160105,60701,Puntarenas,Golfito,Golfito,356,6,607,Brunca,20200616
 560267.6749,957600.0676,Ateles geoffroyi,No,Mono Araña,1,"Puntarenas, CR",8.660057,-83.452358,iNaturalist,Si,4,4,160105,60702,Puntarenas,Golfito,Puerto Jiménez,721,6,607,Brunca,20200616
 553078.9447,960076.2405,Saimiri oerstedii,oerstedii,Mono Tití,60,"Puntarenas, CR",8.682535,-83.51765,iNaturalist,Si,13,13,160105,60503,Puntarenas,Osa,Sierpe,634,6,605,Brunca,20200616
-553078.9447,960076.2405,Saimiri oerstedii,oerstedii,Mono Tití,60,"Puntarenas, CR",8.682535,-83.51765,iNaturalist,Si,13,13,160105,60503,Puntarenas,Osa,Sierpe,634,6,605,Brunca,20200616
 552881.3459,967752.6273,Cebus  imitator,No,Mono Carablanca,1,"Osa, CR-PU, CR",8.751949,-83.519357,iNaturalist,Si,13,13,160105,60503,Puntarenas,Osa,Sierpe,634,6,605,Brunca,20200616
 552872.8848,967795.9025,Cebus  imitator,No,Mono Carablanca,1,"Provincia de Puntarenas, Costa Rica",8.75234,-83.519433,iNaturalist,Si,13,13,160105,60503,Puntarenas,Osa,Sierpe,634,6,605,Brunca,20200616
 554428.638,981804.0946,Saimiri oerstedii,No,Mono Tití,30,"Osa, CR-PU, CR",8.878986,-83.505125,iNaturalist,Si,13,13,160105,60503,Puntarenas,Osa,Sierpe,634,6,605,Brunca,20200616
@@ -108,7 +107,6 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 316769.9847,1100359.833,Alouatta palliata,No,Mono Congo,1,"Nicoya, CR-GU, CR",9.947141,-85.67088,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
 317898.1964,1100770.196,Alouatta palliata,No,Mono Congo,1,"Guanacaste Province, Costa Rica",9.950901,-85.660614,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
 317496.0763,1100854.704,Alouatta palliata,No,Mono Congo,1,"Nicoya, Guanacaste, CR",9.951647,-85.664283,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
-317496.0763,1100854.704,Alouatta palliata,No,Mono Congo,1,"Nicoya, Guanacaste, CR",9.951647,-85.664283,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
 317516.128,1100930.541,Alouatta palliata,No,Mono Congo,8,"Nicoya, CR-GU, CR",9.952333,-85.664104,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
 316284.8732,1101137.727,Alouatta palliata,No,Mono Congo,1,Miss Sky Canopy Tour,9.954149,-85.675338,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
 316407.788,1101150.99,Alouatta palliata,No,Mono Congo,1,"Playa Pelada, Provincia de Guanacaste, Costa Rica",9.954275,-85.674218,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
@@ -123,7 +121,6 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 317274.9485,1103486.181,Alouatta palliata,No,Mono Congo,1,"Santa Marta, Provincia de Guanacaste, Nosara, Costa Rica",9.97542,-85.66642,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
 318574.8689,1103558.21,Alouatta palliata,No,Mono Congo,1,"Nosara Airport, Nicoya, Guanacaste, CR",9.97613,-85.654572,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
 319229.0675,1103953.583,Alouatta palliata,No,Mono Congo,1,Nosara,9.979733,-85.648625,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
-319229.0848,1103953.587,Alouatta palliata,No,Mono Congo,1,"Costa Rica, Guanacaste, Nosara",9.979733,-85.648625,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
 319229.0848,1103953.587,Alouatta palliata,No,Mono Congo,1,"Costa Rica, Guanacaste, Nosara",9.979733,-85.648625,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
 319195.5607,1104212.798,Cebus  imitator,No,Mono Carablanca,1,"Nosara, Nicoya, Guanacaste, CR",9.982074,-85.648942,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
 319216.2662,1104213.588,Alouatta palliata,No,Mono Congo,1,"Nosara, Nicoya, Guanacaste, CR",9.982082,-85.648754,iNaturalist,Si,409,286,160105,50206,Guanacaste,Nicoya,Nosara,134,5,502,Chorotega,20200616
@@ -153,7 +150,6 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 419320.3555,1114847.143,Alouatta palliata,No,Mono Congo,5,"Provincia de Puntarenas, Miramar, Costa Rica",10.081487,-84.736102,iNaturalist,Si,326,343,160105,60401,Puntarenas,Montes de Oro,Miramar,111,6,604,Pacífico Central,20200616
 451686.1498,1114888.857,Alouatta palliata,No,Mono Congo,12,"San Ramón, Alajuela, CR",10.08239,-84.440813,iNaturalist,Si,300,315,160105,20207,Alajuela,San Ramón,San Isidro,9,2,202,Central,20200616
 447087.5581,1115255.766,Alouatta palliata,No,Mono Congo,14,"San Ramón, Alajuela, CR",10.085649,-84.482774,iNaturalist,Si,302,317,160105,20209,Alajuela,San Ramón,Alfaro,18,2,202,Central,20200616
-395338.0706,1116656.102,Alouatta palliata,No,Mono Congo,1,"Provincia de Puntarenas, Manzanillo, Costa Rica",10.09728,-84.954941,iNaturalist,Si,417,358,160105,60106,Puntarenas,Puntarenas,Manzanillo,60,6,601,Pacífico Central,20200616
 395338.0706,1116656.102,Alouatta palliata,No,Mono Congo,1,"Provincia de Puntarenas, Manzanillo, Costa Rica",10.09728,-84.954941,iNaturalist,Si,417,358,160105,60106,Puntarenas,Puntarenas,Manzanillo,60,6,601,Pacífico Central,20200616
 562051.9198,1119021.84,Alouatta palliata,No,Mono Congo,10,"Limón, Costa Rica",10.119567,-83.43378,iNaturalist,Si,346,365,160105,70302,Limón,Siquirres,Pacuarito,220,7,703,Huetar Caribe,20200616
 550320.8251,1120086.045,Alouatta palliata,No,Mono Congo,3,"Limón, Costa Rica",10.129355,-83.540809,iNaturalist,Si,359,380,160105,70305,Limón,Siquirres,El Cairo,107,7,703,Huetar Caribe,20200616
@@ -199,7 +195,6 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 374384.4219,1142356.15,Alouatta palliata,No,Mono Congo,12,"Provincia de Guanacaste, Costa Rica",10.328998,-85.146931,iNaturalist,Si,422,391,160105,50605,Guanacaste,Cañas,Porozal,108,5,506,Chorotega,20200616
 364007.903,1142435.173,Cebus  imitator,No,Mono Carablanca,3,"Parque Nacional Palo Verde, Bagaces, Guanacaste, CR",10.329362,-85.241662,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
 409288.7599,1142301.123,Cebus  imitator,No,Mono Carablanca,1,"Puntarenas Province, Monteverde, Costa Rica",10.329476,-84.828264,iNaturalist,Si,368,390,160105,60109,Puntarenas,Puntarenas,Monte Verde,53,6,601,Pacífico Central,20200616
-409288.7599,1142301.123,Cebus  imitator,No,Mono Carablanca,1,"Puntarenas Province, Monteverde, Costa Rica",10.329476,-84.828264,iNaturalist,Si,368,390,160105,60109,Puntarenas,Puntarenas,Monte Verde,53,6,601,Pacífico Central,20200616
 409234.5153,1142317.069,Cebus  imitator,No,Mono Carablanca,1,"Puntarenas Province, Monteverde, Costa Rica",10.329619,-84.828759,iNaturalist,Si,368,390,160105,60109,Puntarenas,Puntarenas,Monte Verde,53,6,601,Pacífico Central,20200616
 375110.1073,1142448.495,Cebus  imitator,No,Mono Carablanca,17,"Caóas, CR-GU, CR",10.329856,-85.140309,iNaturalist,Si,422,391,160105,50605,Guanacaste,Cañas,Porozal,108,5,506,Chorotega,20200616
 409341.3367,1142436.087,Alouatta palliata,No,Mono Congo,1,"Puntarenas Province, Monteverde, Costa Rica",10.330697,-84.827787,iNaturalist,Si,368,390,160105,60109,Puntarenas,Puntarenas,Monte Verde,53,6,601,Pacífico Central,20200616
@@ -219,17 +214,14 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 301041.2118,1143415.603,Alouatta palliata,No,Mono Congo,34,"Província de Guanacaste, Costa Rica",10.335498,-85.816455,iNaturalist,Si,432,409,160105,50308,Guanacaste,Santa Cruz,Cabo Velas,74,5,503,Chorotega,20200616
 301262.0703,1143525.378,Alouatta palliata,No,Mono Congo,14,"Província de Guanacaste, Costa Rica",10.336502,-85.814445,iNaturalist,Si,432,409,160105,50308,Guanacaste,Santa Cruz,Cabo Velas,74,5,503,Chorotega,20200616
 411406.4644,1143185.024,Alouatta palliata,No,Mono Congo,9,"Provincia de Puntarenas, Monteverde, Costa Rica",10.337516,-84.808949,iNaturalist,Si,376,408,160105,50802,Guanacaste,Tilarán,Quebrada Grande,85,5,508,Chorotega,20200616
-411406.4644,1143185.024,Alouatta palliata,No,Mono Congo,9,"Provincia de Puntarenas, Monteverde, Costa Rica",10.337516,-84.808949,iNaturalist,Si,376,408,160105,50802,Guanacaste,Tilarán,Quebrada Grande,85,5,508,Chorotega,20200616
-297989.8931,1143881.533,Alouatta palliata,No,Mono Congo,115,"Playa Grande, Provincia de Guanacaste, Costa Rica",10.339551,-85.844328,iNaturalist,Si,432,409,160105,50308,Guanacaste,Santa Cruz,Cabo Velas,74,5,503,Chorotega,20200616
+297989.8931,1143881.533,Alouatta palliata,No,Mono Congo,15,"Playa Grande, Provincia de Guanacaste, Costa Rica",10.339551,-85.844328,iNaturalist,Si,432,409,160105,50308,Guanacaste,Santa Cruz,Cabo Velas,74,5,503,Chorotega,20200616
 373728.6417,1143689.211,Alouatta palliata,No,Mono Congo,22,"Provincia de Guanacaste, Costa Rica",10.341027,-85.152962,iNaturalist,Si,422,391,160105,50605,Guanacaste,Cañas,Porozal,108,5,506,Chorotega,20200616
 303172.9792,1144233.95,Alouatta palliata,No,Mono Congo,8,"Província de Guanacaste, Costa Rica",10.343003,-85.797041,iNaturalist,Si,432,409,160105,50308,Guanacaste,Santa Cruz,Cabo Velas,74,5,503,Chorotega,20200616
-412813.9871,1143867.357,Cebus  imitator,No,Mono Carablanca,7,Reserva de Santa Elena,10.343717,-84.796114,iNaturalist,Si,382,419,160105,50803,Guanacaste,Tilarán,Tronadora,140,5,508,Chorotega,20200616
 412813.9871,1143867.357,Cebus  imitator,No,Mono Carablanca,7,Reserva de Santa Elena,10.343717,-84.796114,iNaturalist,Si,382,419,160105,50803,Guanacaste,Tilarán,Tronadora,140,5,508,Chorotega,20200616
 374087.3145,1144003.552,Alouatta palliata,No,Mono Congo,15,"Reserva Forestal Taboga, Caóas, Guanacaste, CR",10.343881,-85.149698,iNaturalist,Si,422,391,160105,50605,Guanacaste,Cañas,Porozal,108,5,506,Chorotega,20200616
 300859.1818,1144357.55,Alouatta palliata,No,Mono Congo,10,"Província de Guanacaste, Costa Rica",10.344001,-85.818165,iNaturalist,Si,432,409,160105,50308,Guanacaste,Santa Cruz,Cabo Velas,74,5,503,Chorotega,20200616
 353458.9543,1144215.564,Alouatta palliata,No,Mono Congo,1,"Parque Nacional Palo Verde, Bagaces, Guanacaste, CR",10.34507,-85.338028,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
 353431.4064,1144220.289,Cebus  imitator,No,Mono Carablanca,12,"Parque Nacional Palo Verde, Bagaces, Guanacaste, CR",10.345112,-85.33828,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
-371268.0085,1144267.664,Alouatta palliata,No,Mono Congo,1,"Unnamed Road, Provincia de Guanacaste, Costa Rica",10.346175,-85.175446,iNaturalist,Si,430,405,160105,50604,Guanacaste,Cañas,Bebedero,58,5,506,Chorotega,20200616
 371268.0085,1144267.664,Alouatta palliata,No,Mono Congo,1,"Unnamed Road, Provincia de Guanacaste, Costa Rica",10.346175,-85.175446,iNaturalist,Si,430,405,160105,50604,Guanacaste,Cañas,Bebedero,58,5,506,Chorotega,20200616
 299919.5013,1144613.587,Alouatta palliata,No,Mono Congo,11,"Província de Guanacaste, Costa Rica",10.346267,-85.826755,iNaturalist,Si,432,409,160105,50308,Guanacaste,Santa Cruz,Cabo Velas,74,5,503,Chorotega,20200616
 352435.8923,1144400.565,Alouatta palliata,No,Mono Congo,1,"Parque Nacional Palo Verde, Bagaces, Guanacaste, CR",10.346703,-85.347375,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
@@ -241,7 +233,6 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 371456.1277,1144519.849,Alouatta palliata,No,Mono Congo,10,"Unnamed Road, Provincia de Guanacaste, Costa Rica",10.348461,-85.173737,iNaturalist,Si,430,405,160105,50604,Guanacaste,Cañas,Bebedero,58,5,506,Chorotega,20200616
 399870.1576,1145178.283,Alouatta palliata,No,Mono Congo,4,Mirador El Ángel,10.355255,-84.914331,iNaturalist,Si,371,400,160105,50702,Guanacaste,Abangares,Sierra,112,5,507,Chorotega,20200616
 399870.1576,1145178.283,Cebus  imitator,No,Mono Carablanca,21,Mirador El Ángel,10.355255,-84.914331,iNaturalist,Si,371,400,160105,50702,Guanacaste,Abangares,Sierra,112,5,507,Chorotega,20200616
-566580.2955,1145330.17,Cebus  imitator,No,Mono Carablanca,1,"Tortuguero National Park, Tortuguero, CR-LI-PO, CR-LI, CR",10.357352,-83.392008,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 566580.2955,1145330.17,Cebus  imitator,No,Mono Carablanca,1,"Tortuguero National Park, Tortuguero, CR-LI-PO, CR-LI, CR",10.357352,-83.392008,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 546763.0246,1145777.35,Ateles geoffroyi,No,Mono Araña,1,"Limón, CR",10.361686,-83.572964,iNaturalist,Si,379,413,160105,70204,Limón,Pococí,Roxana,177,7,702,Huetar Caribe,20200616
 371453.3429,1146259.413,Alouatta palliata,No,Mono Congo,12,"Unnamed Road, Provincia de Guanacaste, Costa Rica",10.364186,-85.17382,iNaturalist,Si,430,405,160105,50604,Guanacaste,Cañas,Bebedero,58,5,506,Chorotega,20200616
@@ -262,12 +253,10 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 546074.2079,1150358.263,Ateles geoffroyi,No,Mono Araña,2,"Limón, CR",10.403113,-83.579198,iNaturalist,Si,379,413,160105,70204,Limón,Pococí,Roxana,177,7,702,Huetar Caribe,20200616
 304011.9561,1150944.731,Alouatta palliata,No,Mono Congo,1,"Guanacaste Province, Brasilito, Costa Rica",10.403692,-85.789728,iNaturalist,Si,432,409,160105,50308,Guanacaste,Santa Cruz,Cabo Velas,74,5,503,Chorotega,20200616
 555363.4079,1150751.461,Ateles geoffroyi,No,Mono Araña,1,"Limón, CR",10.406545,-83.494355,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
-555363.4079,1150751.461,Ateles geoffroyi,No,Mono Araña,1,"Limón, CR",10.406545,-83.494355,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 500502.0073,1151402.727,Ateles geoffroyi,No,Mono Araña,1,Costa Rica,10.412832,-83.995415,iNaturalist,Si,386,435,160105,41002,Heredia,Sarapiquí,La Virgen,514,4,410,Huetar Norte,20200616
 559457.9812,1152210.641,Ateles geoffroyi,No,Mono Araña,4,"Limón, CR",10.419677,-83.456937,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 361196.6196,1152452.192,Alouatta palliata,No,Mono Congo,10,"Guanacaste Province, Bagaces, Costa Rica",10.41981,-85.26769,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
 559820.8662,1152328.617,Ateles geoffroyi,No,Mono Araña,5,"Limón, CR",10.420738,-83.453621,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
-419561.5429,1152890.557,Cebus  imitator,No,Mono Carablanca,12,"La Fortuna, Provincia de Alajuela, San Carlos, Costa Rica",10.425441,-84.734694,iNaturalist,Si,437,420,160105,21007,Alajuela,San Carlos,La Fortuna,230,2,210,Huetar Norte,20200616
 419561.5429,1152890.557,Cebus  imitator,No,Mono Carablanca,12,"La Fortuna, Provincia de Alajuela, San Carlos, Costa Rica",10.425441,-84.734694,iNaturalist,Si,437,420,160105,21007,Alajuela,San Carlos,La Fortuna,230,2,210,Huetar Norte,20200616
 420171.4158,1153006.442,Alouatta palliata,No,Mono Congo,13,"La Fortuna, Provincia de Alajuela, San Carlos, Costa Rica",10.426501,-84.729127,iNaturalist,Si,437,420,160105,21007,Alajuela,San Carlos,La Fortuna,230,2,210,Huetar Norte,20200616
 549963.3887,1153042.465,Ateles geoffroyi,No,Mono Araña,2,"Limón, CR",10.427333,-83.543643,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
@@ -283,7 +272,6 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 556530.1324,1155714.983,Ateles geoffroyi,No,Mono Araña,2,"Limón, CR",10.451404,-83.483626,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 469276.2888,1155903.045,Alouatta palliata,No,Mono Congo,1,"Provincia de Alajuela, Pital, Costa Rica",10.453399,-84.28065,iNaturalist,Si,457,444,160105,21006,Alajuela,San Carlos,Pital,379,2,210,Huetar Norte,20200616
 395501.6832,1156320.318,Cebus  imitator,No,Mono Carablanca,6,"Provincia de Guanacaste, Tilarán, Costa Rica",10.455867,-84.954524,iNaturalist,Si,439,423,160105,50801,Guanacaste,Tilarán,Tilarán,145,5,508,Chorotega,20200616
-395501.6832,1156320.318,Cebus  imitator,No,Mono Carablanca,6,"Provincia de Guanacaste, Tilarán, Costa Rica",10.455867,-84.954524,iNaturalist,Si,439,423,160105,50801,Guanacaste,Tilarán,Tilarán,145,5,508,Chorotega,20200616
 470325.6543,1156228.494,Alouatta palliata,No,Mono Congo,7,"Parada de San Carlos - Boca Tapada, Provincia de Alajuela, Pital, Costa Rica",10.45635,-84.271067,iNaturalist,Si,457,444,160105,21006,Alajuela,San Carlos,Pital,379,2,210,Huetar Norte,20200616
 544809.5711,1156256.393,Ateles geoffroyi,No,Mono Araña,6,"Limón, CR",10.456455,-83.590679,iNaturalist,Si,379,413,160105,70204,Limón,Pococí,Roxana,177,7,702,Huetar Caribe,20200616
 493690.0863,1156341.457,Alouatta palliata,No,Mono Congo,2,"Heredia, Sarapiquí, Costa Rica",10.457481,-84.05764,iNaturalist,Si,451,438,160105,41001,Heredia,Sarapiquí,Puerto Viejo,429,4,410,Huetar Norte,20200616
@@ -291,7 +279,6 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 546370.8196,1156771.193,Ateles geoffroyi,No,Mono Araña,1,"Limón, CR",10.461091,-83.576411,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 549740.7611,1157004.576,Ateles geoffroyi,No,Mono Araña,2,"Limón, CR",10.463158,-83.545625,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 549841.4927,1157201.894,Ateles geoffroyi,No,Mono Araña,4,"Limón, CR",10.464941,-83.544702,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
-395003.4956,1158198.423,Alouatta palliata,No,Mono Congo,9,"Provincia de Guanacaste, Tilarán, Costa Rica",10.472832,-84.959126,iNaturalist,Si,439,423,160105,50801,Guanacaste,Tilarán,Tilarán,145,5,508,Chorotega,20200616
 395003.4956,1158198.423,Alouatta palliata,No,Mono Congo,9,"Provincia de Guanacaste, Tilarán, Costa Rica",10.472832,-84.959126,iNaturalist,Si,439,423,160105,50801,Guanacaste,Tilarán,Tilarán,145,5,508,Chorotega,20200616
 470564.9789,1158431.643,Alouatta palliata,No,Mono Congo,1,"Provincia de Alajuela, San Carlos, Costa Rica",10.476272,-84.268898,iNaturalist,Si,457,444,160105,21006,Alajuela,San Carlos,Pital,379,2,210,Huetar Norte,20200616
 547722.3816,1158560.05,Ateles geoffroyi,No,Mono Araña,3,"Limón, CR",10.477248,-83.564042,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
@@ -305,19 +292,15 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 392160.3837,1161039.312,Alouatta palliata,No,Mono Congo,5,"Unnamed Road, Guanacaste Province, Costa Rica",10.498435,-84.985176,iNaturalist,Si,440,424,160105,50804,Guanacaste,Tilarán,Santa Rosa,71,5,508,Chorotega,20200616
 349354.4828,1161538.592,Alouatta palliata,No,Mono Congo,10,"Bagaces, CR-GU, CR",10.501495,-85.376185,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
 399250.9816,1161452.383,Alouatta palliata,No,Mono Congo,12,"Provincia de Guanacaste, Costa Rica",10.502364,-84.920416,iNaturalist,Si,382,419,160105,50803,Guanacaste,Tilarán,Tronadora,140,5,508,Chorotega,20200616
-399250.9816,1161452.383,Alouatta palliata,No,Mono Congo,12,"Provincia de Guanacaste, Costa Rica",10.502364,-84.920416,iNaturalist,Si,382,419,160105,50803,Guanacaste,Tilarán,Tronadora,140,5,508,Chorotega,20200616
 556177.438,1161419.181,Ateles geoffroyi,No,Mono Araña,1,"Limón, CR",10.502983,-83.486762,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 395509.5857,1161791.051,Alouatta palliata,No,Mono Congo,6,"Provincia de Guanacaste, Costa Rica",10.505325,-84.954603,iNaturalist,Si,439,423,160105,50801,Guanacaste,Tilarán,Tilarán,145,5,508,Chorotega,20200616
 349946.1268,1161998.581,Alouatta palliata,No,Mono Congo,8,"Bagaces, CR-GU, CR",10.505676,-85.3708,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
 396511.6201,1161995.852,Alouatta palliata,No,Mono Congo,4,"Provincia de Guanacaste, Costa Rica",10.507203,-84.945455,iNaturalist,Si,439,423,160105,50801,Guanacaste,Tilarán,Tilarán,145,5,508,Chorotega,20200616
-396511.6201,1161995.852,Alouatta palliata,No,Mono Congo,4,"Provincia de Guanacaste, Costa Rica",10.507203,-84.945455,iNaturalist,Si,439,423,160105,50801,Guanacaste,Tilarán,Tilarán,145,5,508,Chorotega,20200616
 350190.1599,1162237.86,Cebus  imitator,No,Mono Carablanca,18,"Reserva Biológica Lomas De Barbudal, Bagaces, Guanacaste, CR",10.507849,-85.36858,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
 350251.8899,1162764.125,Alouatta palliata,No,Mono Congo,9,"Reserva Biológica Lomas De Barbudal, Bagaces, Guanacaste, CR",10.512608,-85.368037,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
 406115.7943,1162609.435,Alouatta palliata,No,Mono Congo,12,"Provincia de Guanacaste, Costa Rica",10.513,-84.857735,iNaturalist,Si,442,427,160105,50807,Guanacaste,Tilarán,Arenal,73,5,508,Chorotega,20200616
-406115.7943,1162609.435,Alouatta palliata,No,Mono Congo,12,"Provincia de Guanacaste, Costa Rica",10.513,-84.857735,iNaturalist,Si,442,427,160105,50807,Guanacaste,Tilarán,Arenal,73,5,508,Chorotega,20200616
 362325.444,1162946.388,Cebus  imitator,No,Mono Carablanca,15,"Bagaces, Guanacaste, CR",10.514712,-85.257764,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
 358249.6726,1163208.738,Alouatta palliata,No,Mono Congo,12,"De posada llanos del cortés 3 kilometro camino al pueblo de llanos llegan a la Esquina de la plaza de futbol a mano derecha 2.5 kilometros Guanacaste Bagaces llanos del cortes, Provincia de Guanacaste, Bagaces, Costa Rica",10.516934,-85.295003,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
-382402.4974,1163820.575,Alouatta palliata,No,Mono Congo,6,"Provincia de Guanacaste, Costa Rica",10.523289,-85.074396,iNaturalist,Si,438,421,160105,50601,Guanacaste,Cañas,Cañas,193,5,506,Chorotega,20200616
 382402.4974,1163820.575,Alouatta palliata,No,Mono Congo,6,"Provincia de Guanacaste, Costa Rica",10.523289,-85.074396,iNaturalist,Si,438,421,160105,50601,Guanacaste,Cañas,Cañas,193,5,506,Chorotega,20200616
 486805.8569,1164036.722,Alouatta palliata,No,Mono Congo,2,"Heredia, Sarapiquí, Costa Rica",10.527041,-84.120553,iNaturalist,Si,386,435,160105,41002,Heredia,Sarapiquí,La Virgen,514,4,410,Huetar Norte,20200616
 553403.1157,1164134.482,Alouatta palliata,No,Mono Congo,5,"Colorado, Limón, Pococí, Costa Rica",10.527572,-83.512069,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
@@ -351,9 +334,7 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 553789.8747,1165160.973,Alouatta palliata,No,Mono Congo,4,"Colorado, Limón, Pococí, Costa Rica",10.536848,-83.508521,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 553792.4992,1165173.295,Alouatta palliata,No,Mono Congo,1,"Colorado, Limón, Pococí, Costa Rica",10.536959,-83.508497,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 554317.73,1165198.34,Cebus  imitator,No,Mono Carablanca,1,"Limón, Pococí, Costa Rica",10.537178,-83.503698,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
-554317.73,1165198.34,Cebus  imitator,No,Mono Carablanca,1,"Limón, Pococí, Costa Rica",10.537178,-83.503698,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 554526.2464,1165202.818,Alouatta palliata,No,Mono Congo,6,"Tortuguero, Limón, Costa Rica",10.537215,-83.501792,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
-554272.4881,1165216.078,Cebus  imitator,No,Mono Carablanca,5,"Limón, Pococí, Costa Rica",10.537339,-83.504111,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 554272.4881,1165216.078,Cebus  imitator,No,Mono Carablanca,5,"Limón, Pococí, Costa Rica",10.537339,-83.504111,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 554402.201,1165220.682,Alouatta palliata,No,Mono Congo,3,"Colorado, Limón, Pococí, Costa Rica",10.537379,-83.502926,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 554331.7869,1165241.647,Alouatta palliata,No,Mono Congo,4,"Colorado, Limón, Pococí, Costa Rica",10.537569,-83.503569,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
@@ -367,7 +348,6 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 554481.3324,1165363.926,Alouatta palliata,No,Mono Congo,1,"Tortuguero, Limón, Costa Rica",10.538673,-83.5022,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 554483.0196,1165444.139,Alouatta palliata,No,Mono Congo,12,"Tortuguero, Limón, Costa Rica",10.539398,-83.502184,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 362828.0698,1165732.46,Alouatta palliata,No,Mono Congo,10,"164, La Horquetilla, Provincia de Guanacaste, Bagaces, Costa Rica",10.539915,-85.253275,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
-362828.0698,1165732.46,Alouatta palliata,No,Mono Congo,10,"164, La Horquetilla, Provincia de Guanacaste, Bagaces, Costa Rica",10.539915,-85.253275,iNaturalist,Si,446,432,160105,50401,Guanacaste,Bagaces,Bagaces,889,5,504,Chorotega,20200616
 554409.4243,1165535.03,Alouatta palliata,No,Mono Congo,1,"Tortuguero, Limón, Costa Rica",10.540221,-83.502855,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 554409.4243,1165535.03,Alouatta palliata,No,Mono Congo,4,"Tortuguero, Limón, Costa Rica",10.540221,-83.502855,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 543850.7924,1165564.865,Ateles geoffroyi,No,Mono Araña,1,"Limón, CR",10.540627,-83.599328,iNaturalist,Si,383,422,160105,70205,Limón,Pococí,Cariari,201,7,702,Huetar Caribe,20200616
@@ -379,7 +359,6 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 544716.7351,1167003.323,Ateles geoffroyi,No,Mono Araña,3,"Limón, CR",10.553623,-83.591399,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 552931.5138,1167670.818,Alouatta palliata,No,Mono Congo,1,"Colorado, Limón, Pococí, Costa Rica",10.559552,-83.516328,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 393921.4221,1167946.475,Alouatta palliata,No,Mono Congo,12,"Provincia de Guanacaste, Costa Rica",10.560927,-84.969285,iNaturalist,Si,447,433,160105,50806,Guanacaste,Tilarán,Tierras Morenas,83,5,508,Chorotega,20200616
-387727.1528,1169959.048,Alouatta palliata,No,Mono Congo,25,"Provincia de Guanacaste, Costa Rica",10.578942,-85.025939,iNaturalist,Si,447,433,160105,50806,Guanacaste,Tilarán,Tierras Morenas,83,5,508,Chorotega,20200616
 387727.1528,1169959.048,Alouatta palliata,No,Mono Congo,25,"Provincia de Guanacaste, Costa Rica",10.578942,-85.025939,iNaturalist,Si,447,433,160105,50806,Guanacaste,Tilarán,Tierras Morenas,83,5,508,Chorotega,20200616
 551828.1283,1170320.094,Alouatta palliata,No,Mono Congo,6,"Barra Del Colorado Wildlife Refuge, Pococi, Limon, CR",10.58352,-83.526374,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 551946.582,1170531.34,Alouatta palliata,No,Mono Congo,2,"Barra Del Colorado Wildlife Refuge, Pococi, Limon, CR",10.585428,-83.525288,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
@@ -404,7 +383,6 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 316199.6434,1175606.623,Alouatta palliata,No,Mono Congo,6,"Liberia, CR-GU, CR",10.62718,-85.679672,iNaturalist,Si,466,453,160105,50104,Guanacaste,Liberia,Nacascolo,327,5,501,Chorotega,20200616
 316437.5632,1175685.223,Alouatta palliata,No,Mono Congo,17,"Liberia, CR-GU, CR",10.627902,-85.677502,iNaturalist,Si,466,453,160105,50104,Guanacaste,Liberia,Nacascolo,327,5,501,Chorotega,20200616
 545048.1927,1175379.29,Alouatta palliata,No,Mono Congo,7,"Limón, Pococí, Costa Rica",10.629348,-83.588269,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
-545048.1927,1175379.29,Alouatta palliata,No,Mono Congo,7,"Limón, Pococí, Costa Rica",10.629348,-83.588269,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 318481.8104,1177213.207,Cebus  imitator,No,Mono Carablanca,14,"Calle Andaz, Liberia, Guanacaste, CR",10.641811,-85.658901,iNaturalist,Si,466,453,160105,50104,Guanacaste,Liberia,Nacascolo,327,5,501,Chorotega,20200616
 533860.7728,1177245.275,Alouatta palliata,No,Mono Congo,4,"Colorado, Limón, Pococí, Costa Rica",10.646337,-83.690502,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 319028.5988,1177729.466,Alouatta palliata,No,Mono Congo,7,"Calle Andaz, Liberia, Guanacaste, CR",10.646503,-85.65393,iNaturalist,Si,466,453,160105,50104,Guanacaste,Liberia,Nacascolo,327,5,501,Chorotega,20200616
@@ -416,17 +394,14 @@ x,y,Especie,Subespecie,Nombre_com,Total,Lugar,latitude,longitude,Plataforma,Cont
 536087.2557,1179971.119,Alouatta palliata,No,Mono Congo,5,"Colorado, Limón, Pococí, Costa Rica",10.670961,-83.670125,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 546166.5752,1180556.516,Ateles geoffroyi,No,Mono Araña,3,Costa Rica,10.676143,-83.577983,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 382962.2774,1183520.274,Alouatta palliata,No,Mono Congo,6,"Provincia de Guanacaste, Bagaces, Costa Rica",10.70139,-85.069902,iNaturalist,Si,452,439,160105,50404,Guanacaste,Bagaces,Río Naranjo,44,5,504,Chorotega,20200616
-382962.2774,1183520.274,Alouatta palliata,No,Mono Congo,6,"Provincia de Guanacaste, Bagaces, Costa Rica",10.70139,-85.069902,iNaturalist,Si,452,439,160105,50404,Guanacaste,Bagaces,Río Naranjo,44,5,504,Chorotega,20200616
 366704.5077,1184412.901,Alouatta palliata,No,Mono Congo,12,"Provincia de Guanacaste, Guayabo, Costa Rica",10.708914,-85.218533,iNaturalist,Si,456,443,160105,50403,Guanacaste,Bagaces,Mogote,182,5,504,Chorotega,20200616
 345710.1829,1185706.247,Alouatta palliata,No,Mono Congo,1,"Guanacaste Province, Curubandé de Liberia, Costa Rica",10.719795,-85.410471,iNaturalist,Si,463,450,160105,50105,Guanacaste,Liberia,Curubandé,81,5,501,Chorotega,20200616
 345710.1829,1185706.247,Cebus  imitator,No,Mono Carablanca,1,"Guanacaste Province, Curubandé de Liberia, Costa Rica",10.719795,-85.410471,iNaturalist,Si,463,450,160105,50105,Guanacaste,Liberia,Curubandé,81,5,501,Chorotega,20200616
 546503.0147,1185651.18,Alouatta palliata,No,Mono Congo,1,"Limón, Pococí, Costa Rica",10.722201,-83.574844,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 384396.5332,1186710.484,Alouatta palliata,No,Mono Congo,4,"Provincia de Alajuela, Bijagua de Upala, Costa Rica",10.730274,-85.056892,iNaturalist,Si,461,448,160105,21304,Alajuela,Upala,Bijagua,187,2,213,Huetar Norte,20200616
 384040.1609,1187065.956,Cebus  imitator,No,Mono Carablanca,9,"Provincia de Alajuela, Bijagua de Upala, Costa Rica",10.733476,-85.060161,iNaturalist,Si,461,448,160105,21304,Alajuela,Upala,Bijagua,187,2,213,Huetar Norte,20200616
-384040.1609,1187065.956,Cebus  imitator,No,Mono Carablanca,9,"Provincia de Alajuela, Bijagua de Upala, Costa Rica",10.733476,-85.060161,iNaturalist,Si,461,448,160105,21304,Alajuela,Upala,Bijagua,187,2,213,Huetar Norte,20200616
 338713.4307,1187298.012,Alouatta palliata,No,Mono Congo,9,"Provincia de Guanacaste, Costa Rica",10.733886,-85.474488,iNaturalist,Si,465,452,160105,50102,Guanacaste,Liberia,Cañas Dulces,243,5,501,Chorotega,20200616
 387060.3551,1187784.862,Alouatta palliata,No,Mono Congo,2,"Provincia de Alajuela, Costa Rica",10.740068,-85.032574,iNaturalist,Si,461,448,160105,21304,Alajuela,Upala,Bijagua,187,2,213,Huetar Norte,20200616
-386695.0357,1187830.182,Cebus  imitator,No,Mono Carablanca,5,"Provincia de Alajuela, Costa Rica",10.740467,-85.035915,iNaturalist,Si,461,448,160105,21304,Alajuela,Upala,Bijagua,187,2,213,Huetar Norte,20200616
 386695.0357,1187830.182,Cebus  imitator,No,Mono Carablanca,5,"Provincia de Alajuela, Costa Rica",10.740467,-85.035915,iNaturalist,Si,461,448,160105,21304,Alajuela,Upala,Bijagua,187,2,213,Huetar Norte,20200616
 542717.5109,1193053.498,Alouatta palliata,No,Mono Congo,1,"Colorado, Limón, Pococí, Costa Rica",10.789172,-83.609366,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
 540723.4509,1194474.441,Alouatta palliata,No,Mono Congo,1,"Limón, Pococí, Costa Rica",10.802042,-83.627585,iNaturalist,Si,387,457,160105,70206,Limón,Pococí,Colorado,1158,7,702,Huetar Caribe,20200616
