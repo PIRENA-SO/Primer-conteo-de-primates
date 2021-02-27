@@ -57,11 +57,49 @@ titi <- datos %>%
 congo <- datos %>%
   filter(Especie == "Alouatta palliata")
 
+asp <- sf::st_read("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\ASP.shp")
+
+asp_wgs84 <- asp %>%
+  st_transform(4326)
+
+
 #--------------- Otros parámetros -----------------
 
 ucr <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/UCR.PNG"
 acoprico <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/ACOPRICO.jpeg"
 madeso <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/firma%20madeso.PNG"
+
+# URL base del servicio WFS IGN 1:200mil
+url_base_wfs_ign_200mil <- "http://geos.snitcr.go.cr/be/IGN_200/wfs?"
+
+# URL base del servicio WFS del Sinac
+url_base_wfs_sinac <- "http://geos1pne.sirefor.go.cr/wfs?"
+
+# URL de las solicitudes de las capas
+
+solicitud_redvial_wfs <- 
+  "request=GetFeature&service=WFS&version=1.0.0&typename=IGN_200:redvial_200k&outputFormat=application/json"
+
+solicitud_ac_wfs <- 
+  "request=GetFeature&service=WFS&version=1.0.0&typename=PNE:areas_conservacion&outputFormat=application/json"
+
+# area de conservacion
+cr_ac <-
+  st_read(paste0(url_base_wfs_sinac, solicitud_ac_wfs)) %>%
+  st_simplify(dTolerance = 500)
+
+# Red vial de Costa Rica
+cr_redvial <-
+  st_read(paste0(url_base_wfs_ign_200mil, solicitud_redvial_wfs)) %>%
+  st_simplify(dTolerance = 0)
+
+
+ac_wgs84 <- cr_ac %>%
+  st_transform(4326)
+
+redvial_wgs84 <- cr_redvial %>%
+  st_transform(4326)
+
 ```
 
 2021
@@ -229,15 +267,23 @@ leaflet(datos) %>%
     lng = ~longitude, lat = ~latitude, intensity = ~Total,
     blur = 10, max = max(datos$Total), radius = 15,
     group = "Densidad") %>%
+  addPolygons(data= asp_wgs84, color = "#35b541", fill = TRUE, fillColor = "#35b541", stroke = T, weight = 3, opacity = 0.5,
+              group = "ASP",
+              popup = paste("Área Silvestre Protegida:", asp_wgs84$nombre_asp, "Área de conservación:", asp_wgs84$nombre_ac, sep = '<br/>')) %>%
+  addPolygons(data = ac_wgs84, color = "#35b541", fill = TRUE, fillColor = "#35b541", stroke = T, weight = 3, opacity = 0.5,
+              group = "Área de Conservación") %>%
+  addPolygons(data = redvial_wgs84, color = "#35b541", fill = TRUE, fillColor = "#35b541", stroke = T, weight = 3, opacity = 0.5,
+              group = "Red Vial") %>%
   addLayersControl(baseGroups = c("OpenStreetMap", "Stamen Toner Lite", "CartoDB DarkMatter"),
-                   overlayGroups = c("Registros","Distritos con registros", "Densidad"),
+                   overlayGroups = c("Registros","Distritos con registros", "Densidad", "ASP", "Área de Conservación", "Red Vial"),
                    options = layersControlOptions(collapsed = TRUE))  %>%
   addScaleBar() %>%
-  hideGroup(c("Distritos con registros", "Densidad")) %>%
+  hideGroup(c("Distritos con registros", "Densidad", "ASP", "Área de Conservación", "Red Vial")) %>%
    addMiniMap(
     toggleDisplay = TRUE,
     position = "bottomleft",
     tiles = providers$OpenStreetMap.Mapnik)
+
 ```
 
 Row {data-height=600}
