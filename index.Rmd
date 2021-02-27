@@ -9,7 +9,6 @@ output:
     navbar:
         - { icon: "fab fa-facebook-f", href: "https://www.facebook.com/groups/1089060534898714", align: right }
         - { icon: "fas fa-leaf", href: "https://www.inaturalist.org/projects/conteo-nacional-de-primates-costa-rica", align: right}
-    source_code: https://github.com/Kevinchaes/Primer-conteo-de-primates.git
 ---
 
 ```{r setup, include=FALSE}
@@ -36,8 +35,7 @@ library(geojsonio)
 #--------------- Archivos de datos ----------------
 distritos <- st_read('https://raw.githubusercontent.com/pf0953-programaciongeoespacialr-2020/datos/master/delimitacion-territorial-administrativa/cr/ign/cr_limite_distrital_ign_wgs84.geojson')
 
-capa <- st_read("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\Conteo_primates_CR.shp")
-
+capa <- st_read("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\intersect.shp")
 
 datos <- read.csv("~/R/Primer-conteo-de-primates/files/datos.csv")
 
@@ -69,29 +67,14 @@ ucr <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/file
 acoprico <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/ACOPRICO.jpeg"
 madeso <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/firma%20madeso.PNG"
 
-# URL base del servicio WFS IGN 1:200mil
-url_base_wfs_ign_200mil <- "http://geos.snitcr.go.cr/be/IGN_200/wfs?"
 
-# URL base del servicio WFS del Sinac
-url_base_wfs_sinac <- "http://geos1pne.sirefor.go.cr/wfs?"
-
-# URL de las solicitudes de las capas
-
-solicitud_redvial_wfs <- 
-  "request=GetFeature&service=WFS&version=1.0.0&typename=IGN_200:redvial_200k&outputFormat=application/json"
-
-solicitud_ac_wfs <- 
-  "request=GetFeature&service=WFS&version=1.0.0&typename=PNE:areas_conservacion&outputFormat=application/json"
 
 # area de conservacion
 cr_ac <-
-  st_read(paste0(url_base_wfs_sinac, solicitud_ac_wfs)) %>%
-  st_simplify(dTolerance = 500)
+  st_read("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\AConsevacionSINAC2014.shp")
 
 # Red vial de Costa Rica
-cr_redvial <-
-  st_read(paste0(url_base_wfs_ign_200mil, solicitud_redvial_wfs)) %>%
-  st_simplify(dTolerance = 0)
+cr_redvial <- st_read("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\vias 1200mil.shp")
 
 
 ac_wgs84 <- cr_ac %>%
@@ -137,9 +120,9 @@ Ronald Sánchez Porras
 
 Inés Azofeifa Rojas
 
-Michel Moya Calderón
+Michael Moya Calderón
 
-Allan Loria
+Allan Loria Chaves
 
 Kevin Chavarria Esquivel
 
@@ -272,7 +255,7 @@ leaflet(datos) %>%
               popup = paste("Área Silvestre Protegida:", asp_wgs84$nombre_asp, "Área de conservación:", asp_wgs84$nombre_ac, sep = '<br/>')) %>%
   addPolygons(data = ac_wgs84, color = "#35b541", fill = TRUE, fillColor = "#35b541", stroke = T, weight = 3, opacity = 0.5,
               group = "Área de Conservación") %>%
-  addPolygons(data = redvial_wgs84, color = "#35b541", fill = TRUE, fillColor = "#35b541", stroke = T, weight = 3, opacity = 0.5,
+  addPolylines(data = redvial_wgs84, color = "#818c8c", fill = TRUE, fillColor = "#818c8c", stroke = T, weight = 3, opacity = 0.5,
               group = "Red Vial") %>%
   addLayersControl(baseGroups = c("OpenStreetMap", "Stamen Toner Lite", "CartoDB DarkMatter"),
                    overlayGroups = c("Registros","Distritos con registros", "Densidad", "ASP", "Área de Conservación", "Red Vial"),
