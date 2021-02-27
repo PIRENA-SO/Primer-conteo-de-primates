@@ -43,16 +43,16 @@ sf_datos <- left_join(distritos, datos, by= c("provincia", "canton", "distrito")
   drop_na()
 
 
-cara_blanca <- datos %>%
+cara_blanca <- sf_datos %>%
   filter(Especie == "Cebus  imitator")
 
-araña <- datos %>%
+araña <- sf_datos %>%
   filter(Especie == "Ateles geoffroyi")
 
 titi <- datos %>%
   filter(Especie == "Saimiri oerstedii")
 
-congo <- datos %>%
+congo <- sf_datos %>%
   filter(Especie == "Alouatta palliata")
 
 asp <- sf::st_read("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\ASP.shp")
@@ -234,6 +234,14 @@ leaflet(datos) %>%
                "Provincia: ", datos$provincia, "<br>",
                "Cantón: ", datos$canton, "<br>",
                "Distrito: ", datos$distrito, "<br>")) %>%
+  addMarkers(data= titi, group = "Registros Titi",
+              popup = paste(
+                "Especie: ", titi$Especie, "<br>",
+                "Nombre común: ", titi$Nombre_com, "<br>",
+                "Registros: ", titi$Total, "<br>",
+                "Provincia: ", titi$provincia, "<br>",
+                "Cantón: ", titi$canton, "<br>",
+                "Distrito: ", titi$distrito, "<br>")) %>%
   addPolygons(
     data = sf_datos,
     stroke=T, fillOpacity = 0,
@@ -247,22 +255,25 @@ leaflet(datos) %>%
       "Nombre común: ", sf_datos$Nombre_com, "<br>",
       "Registros: ", sf_datos$Total, "<br>")) %>%
   addHeatmap(data = datos,
-    lng = ~longitude, lat = ~latitude, intensity = ~Total,
-    blur = 10, max = max(datos$Total), radius = 15,
-    group = "Densidad") %>%
+             lng = ~longitude, lat = ~latitude, intensity = ~Total,
+             blur = 10, max = max(datos$Total), radius = 15,
+             group = "Densidad") %>%
   addPolygons(data= asp_wgs84, color = "#35b541", fill = TRUE, fillColor = "#35b541", stroke = T, weight = 3, opacity = 0.5,
               group = "ASP",
               popup = paste("Área Silvestre Protegida:", asp_wgs84$nombre_asp, "Área de conservación:", asp_wgs84$nombre_ac, sep = '<br/>')) %>%
   addPolygons(data = ac_wgs84, color = "#35b541", fill = TRUE, fillColor = "#35b541", stroke = T, weight = 3, opacity = 0.5,
-              group = "Área de Conservación") %>%
+              group = "Área de Conservación",
+              popup = paste(
+                "Área de conservación: ", ac_wgs84$AREA_CONSE, "<br>")) %>%
   addPolylines(data = redvial_wgs84, color = "#818c8c", fill = TRUE, fillColor = "#818c8c", stroke = T, weight = 3, opacity = 0.5,
-              group = "Red Vial") %>%
+               group = "Red Vial",
+               smoothFactor = 10) %>%
   addLayersControl(baseGroups = c("OpenStreetMap", "Stamen Toner Lite", "CartoDB DarkMatter"),
-                   overlayGroups = c("Registros","Distritos con registros", "Densidad", "ASP", "Área de Conservación", "Red Vial"),
+                   overlayGroups = c("Registros", "Registros Titi", "Distritos con registros", "Densidad", "ASP", "Área de Conservación", "Red Vial"),
                    options = layersControlOptions(collapsed = TRUE))  %>%
   addScaleBar() %>%
-  hideGroup(c("Distritos con registros", "Densidad", "ASP", "Área de Conservación", "Red Vial")) %>%
-   addMiniMap(
+  hideGroup(c("Distritos con registros", "Registros Titi", "Densidad", "ASP", "Área de Conservación", "Red Vial")) %>%
+  addMiniMap(
     toggleDisplay = TRUE,
     position = "bottomleft",
     tiles = providers$OpenStreetMap.Mapnik)
@@ -275,7 +286,7 @@ Row {data-height=600}
 ### Tabla de información 
 ```{r}
 datos %>%
-  select(Especie = Especie, "Nombre común" = Nombre_com, Registros = Total, Provincia = provincia, Cantón = canton, Distrito = distrito, Sitio = Lugar) %>%
+  select(Especie = Especie, "Nombre común" = Nombre_com, Registros = Total, Provincia = provincia, Cantón = canton, Distrito = distrito, Sitio = Lugar, Plataforma = Plataforma) %>%
   DT::datatable(rownames = FALSE,
                 options = list(searchHighlight = TRUE, 
                                language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json')
