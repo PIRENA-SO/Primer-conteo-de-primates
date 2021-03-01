@@ -85,6 +85,22 @@ ac_wgs84 <- cr_ac %>%
 redvial_wgs84 <- cr_redvial %>%
   st_transform(4326)
 
+top10 <- datos %>%
+  select(provincia, canton, distrito, Total) %>%
+  arrange(desc(Total)) %>%
+  slice(1:30) 
+
+otros = datos %>%
+  arrange(desc(Total)) %>%
+  slice(31:511) %>%
+  select(everything()) %>%
+  summarise(provincia = "Otros",
+            canton = "Otros",
+            distrito = "Otros",
+            Total = sum(Total))
+
+grafico <- rbind(top10, otros)
+
 ```
 
 2021
@@ -227,7 +243,6 @@ leaflet(datos) %>%
   fitBounds(lng1 = -86, lng2 = -82, lat1 = 8, lat2 = 11) %>%
   addProviderTiles(providers$OpenStreetMap.Mapnik, group = "Open StreeT Map") %>%
   addTiles(urlTemplate ="https://mts1.google.com/vt/lyrs=s&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = 'Google', group = "Google Maps") %>%
-  addProviderTiles(providers$CartoDB.DarkMatter, group = "CartoDB DarkMatter") %>%
   addMarkers(clusterOptions = markerClusterOptions(),
              group = "Registros",
              popup = paste(
@@ -282,7 +297,7 @@ leaflet(datos) %>%
       "Nombre común: ", sf_datos$Nombre_com, "<br>",
       "Registros: ", sf_datos$Total, "<br>")) %>%
   addHeatmap(data = datos,
-             lng = ~longitude, lat = ~latitude, intensity = ~pal(Total),
+             lng = ~longitude, lat = ~latitude, intensity = ~Total,
              blur = 10, max = max(datos$Total), radius = 15,
              group = "Densidad") %>%
   addPolygons(data= asp_wgs84, color = "#35b541", fill = TRUE, fillColor = "#35b541", stroke = T, weight = 3, opacity = 0.5,
@@ -295,7 +310,7 @@ leaflet(datos) %>%
   addPolylines(data = redvial_wgs84, color = "#818c8c", fill = TRUE, fillColor = "#818c8c", stroke = T, weight = 3, opacity = 0.5,
                group = "Red Vial",
                smoothFactor = 10) %>%
-  addLayersControl(baseGroups = c("OpenStreetMap", "Google Maps", "CartoDB DarkMatter"),
+  addLayersControl(baseGroups = c("OpenStreetMap", "Google Maps"),
                    overlayGroups = c("Registros", "Registros titi", "Registros congo", "Registros araña", "Registros cara blanca", "Distritos con registros", "Densidad", "ASP", "Área de Conservación", "Red Vial"),
                    options = layersControlOptions(collapsed = TRUE))  %>%
   addScaleBar()  %>%
@@ -311,6 +326,7 @@ Row {data-height=600}
 -----------------------------------------------------------------------
 
 ### Tabla de información 
+
 ```{r}
 datos %>%
   select(Especie = Especie, "Nombre común" = Nombre_com, Registros = Total, Provincia = provincia, Cantón = canton, Distrito = distrito, Sitio = Lugar, Plataforma = Plataforma) %>%
@@ -322,21 +338,40 @@ datos %>%
 
 Row {data-height=400}
 -----------------------------------------------------------------------
-
-### Mapa cloropletas
 ```{r}
+plot_ly(grafico, 
+        labels = ~ distrito, 
+        values = ~ Total, 
+        type = "pie",
+        textinfo = "distrito",
+        textposition = '',
+        marker = list(color = "blue")
+) %>%
+  layout(title = "Top 30 de distritos con más registros") %>%
+  config(locale = "es")
 
 ```
 
-### Gráfico
 ```{r}
-
+plot_ly(grafico, 
+        labels = ~ canton, 
+        values = ~ Total, 
+        type = "pie",
+        textinfo = "distrito",
+        textposition = '',
+        marker = list(color = "blue")
+) %>%
+  layout(title = "Top 30 de cantones con más registros") %>%
+  config(locale = "es")
 ```
+
 
 Proximamente
 =======================================================================
 Row {data-height=400}
 -----------------------------------------------------------------------
 ### Conteo de primates 2022
+### Gracias por su cooperación
+
 
 
