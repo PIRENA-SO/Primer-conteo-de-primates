@@ -218,15 +218,15 @@ valueBox(value = paste(sum(congo$Total)),
 
 
 
-Row {data-height=800}
+Row {data-height=700}
 -----------------------------------------------------------------------
 ### Distribución espacial de registros
 ```{r}
 
 leaflet(datos) %>%
   fitBounds(lng1 = -86, lng2 = -82, lat1 = 8, lat2 = 11) %>%
-  addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
-  addProviderTiles(providers$Stamen.TonerLite, group = "Stamen Toner Lite") %>%
+  addProviderTiles(providers$OpenStreetMap.Mapnik, group = "Open StreeT Map") %>%
+  addTiles(urlTemplate ="https://mts1.google.com/vt/lyrs=s&hl=en&src=app&x={x}&y={y}&z={z}&s=G", attribution = 'Google', group = "Google Maps") %>%
   addProviderTiles(providers$CartoDB.DarkMatter, group = "CartoDB DarkMatter") %>%
   addMarkers(clusterOptions = markerClusterOptions(),
              group = "Registros",
@@ -295,7 +295,7 @@ leaflet(datos) %>%
   addPolylines(data = redvial_wgs84, color = "#818c8c", fill = TRUE, fillColor = "#818c8c", stroke = T, weight = 3, opacity = 0.5,
                group = "Red Vial",
                smoothFactor = 10) %>%
-  addLayersControl(baseGroups = c("OpenStreetMap", "Stamen Toner Lite", "CartoDB DarkMatter"),
+  addLayersControl(baseGroups = c("OpenStreetMap", "Google Maps", "CartoDB DarkMatter"),
                    overlayGroups = c("Registros", "Registros titi", "Registros congo", "Registros araña", "Registros cara blanca", "Distritos con registros", "Densidad", "ASP", "Área de Conservación", "Red Vial"),
                    options = layersControlOptions(collapsed = TRUE))  %>%
   addScaleBar()  %>%
