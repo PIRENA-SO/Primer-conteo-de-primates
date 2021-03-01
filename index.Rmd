@@ -42,7 +42,9 @@ capa <- st_read("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\
 datos <- read.csv("~/R/Primer-conteo-de-primates/files/datos.csv")
 
 sf_datos <- left_join(distritos, datos, by= c("provincia", "canton", "distrito")) %>%
-  drop_na()
+  drop_na() %>%
+  group_by(provincia, canton, distrito) %>%
+  summarise("Total" = sum(Total))
 
 
 cara_blanca <- datos %>%
@@ -287,14 +289,12 @@ leaflet(datos) %>%
   addPolygons(
     data = sf_datos,
     stroke=T, fillOpacity = 0,
-    color="red", weight=0.3, opacity= 2.0,
+    color="red", weight=0.8, opacity= 2.0,
     group = "Distritos con registros",
     popup = paste(
       "Provincia: ", sf_datos$provincia, "<br>",
       "Cantón: ", sf_datos$canton, "<br>",
       "Distrito: ", sf_datos$distrito, "<br>",
-      "Especie: ", sf_datos$Especie, "<br>",
-      "Nombre común: ", sf_datos$Nombre_com, "<br>",
       "Registros: ", sf_datos$Total, "<br>")) %>%
   addHeatmap(data = datos,
              lng = ~longitude, lat = ~latitude, intensity = ~Total,
