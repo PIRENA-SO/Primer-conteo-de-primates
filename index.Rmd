@@ -27,6 +27,8 @@ library(pryr)
 library(rgdal)
 library(rmapshaper)
 library(geojsonio)
+library(leaflet.extras)
+
 
 ```
 
@@ -43,16 +45,16 @@ sf_datos <- left_join(distritos, datos, by= c("provincia", "canton", "distrito")
   drop_na()
 
 
-cara_blanca <- sf_datos %>%
+cara_blanca <- datos %>%
   filter(Especie == "Cebus  imitator")
 
-araña <- sf_datos %>%
+araña <- datos %>%
   filter(Especie == "Ateles geoffroyi")
 
 titi <- datos %>%
   filter(Especie == "Saimiri oerstedii")
 
-congo <- sf_datos %>%
+congo <- datos %>%
   filter(Especie == "Alouatta palliata")
 
 asp <- sf::st_read("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primates\\SHP\\ASP.shp")
@@ -220,6 +222,8 @@ Row {data-height=800}
 -----------------------------------------------------------------------
 ### Distribución espacial de registros
 ```{r}
+pal <- colorNumeric(palette = "RdYlBu", domain = datos$Total)
+
 leaflet(datos) %>%
   fitBounds(lng1 = -86, lng2 = -82, lat1 = 8, lat2 = 11) %>%
   addProviderTiles(providers$OpenStreetMap.Mapnik, group = "OpenStreetMap") %>%
@@ -234,7 +238,7 @@ leaflet(datos) %>%
                "Provincia: ", datos$provincia, "<br>",
                "Cantón: ", datos$canton, "<br>",
                "Distrito: ", datos$distrito, "<br>")) %>%
-  addMarkers(data= titi, group = "Registros Titi",
+  addMarkers(data= titi, group = "Registros titi",
               popup = paste(
                 "Especie: ", titi$Especie, "<br>",
                 "Nombre común: ", titi$Nombre_com, "<br>",
@@ -242,6 +246,30 @@ leaflet(datos) %>%
                 "Provincia: ", titi$provincia, "<br>",
                 "Cantón: ", titi$canton, "<br>",
                 "Distrito: ", titi$distrito, "<br>")) %>%
+  addMarkers(data= congo, group = "Registros congo",
+              popup = paste(
+                "Especie: ", congo$Especie, "<br>",
+                "Nombre común: ", congo$Nombre_com, "<br>",
+                "Registros: ", congo$Total, "<br>",
+                "Provincia: ", congo$provincia, "<br>",
+                "Cantón: ", congo$canton, "<br>",
+                "Distrito: ", congo$distrito, "<br>")) %>%
+  addMarkers(data= araña, group = "Registros araña",
+              popup = paste(
+                "Especie: ", araña$Especie, "<br>",
+                "Nombre común: ", araña$Nombre_com, "<br>",
+                "Registros: ", araña$Total, "<br>",
+                "Provincia: ", araña$provincia, "<br>",
+                "Cantón: ", araña$canton, "<br>",
+                "Distrito: ", araña$distrito, "<br>")) %>%
+  addMarkers(data= cara_blanca, group = "Registros cara blanca",
+              popup = paste(
+                "Especie: ", cara_blanca$Especie, "<br>",
+                "Nombre común: ", cara_blanca$Nombre_com, "<br>",
+                "Registros: ", cara_blanca$Total, "<br>",
+                "Provincia: ", cara_blanca$provincia, "<br>",
+                "Cantón: ", cara_blanca$canton, "<br>",
+                "Distrito: ", cara_blanca$distrito, "<br>")) %>%
   addPolygons(
     data = sf_datos,
     stroke=T, fillOpacity = 0,
@@ -255,9 +283,13 @@ leaflet(datos) %>%
       "Nombre común: ", sf_datos$Nombre_com, "<br>",
       "Registros: ", sf_datos$Total, "<br>")) %>%
   addHeatmap(data = datos,
-             lng = ~longitude, lat = ~latitude, intensity = ~Total,
+             lng = ~longitude, lat = ~latitude, intensity = ~pal(Total),
              blur = 10, max = max(datos$Total), radius = 15,
              group = "Densidad") %>%
+  addLegend("bottomright", pal = pal, values = ~Total,
+    title = "Densidad de registros",
+    opacity = 1,
+    group = "Densidad") %>%
   addPolygons(data= asp_wgs84, color = "#35b541", fill = TRUE, fillColor = "#35b541", stroke = T, weight = 3, opacity = 0.5,
               group = "ASP",
               popup = paste("Área Silvestre Protegida:", asp_wgs84$nombre_asp, "Área de conservación:", asp_wgs84$nombre_ac, sep = '<br/>')) %>%
@@ -269,10 +301,10 @@ leaflet(datos) %>%
                group = "Red Vial",
                smoothFactor = 10) %>%
   addLayersControl(baseGroups = c("OpenStreetMap", "Stamen Toner Lite", "CartoDB DarkMatter"),
-                   overlayGroups = c("Registros", "Registros Titi", "Distritos con registros", "Densidad", "ASP", "Área de Conservación", "Red Vial"),
+                   overlayGroups = c("Registros", "Registros titi", "Registros congo", "Registros araña", "Registros cara blanca", "Distritos con registros", "Densidad", "ASP", "Área de Conservación", "Red Vial"),
                    options = layersControlOptions(collapsed = TRUE))  %>%
-  addScaleBar() %>%
-  hideGroup(c("Distritos con registros", "Registros Titi", "Densidad", "ASP", "Área de Conservación", "Red Vial")) %>%
+  addScaleBar()  %>%
+  hideGroup(c("Distritos con registros", "Registros titi", "Registros congo", "Registros araña", "Registros cara blanca", "Densidad", "ASP", "Área de Conservación", "Red Vial")) %>%
   addMiniMap(
     toggleDisplay = TRUE,
     position = "bottomleft",
