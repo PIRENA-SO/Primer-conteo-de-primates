@@ -222,7 +222,6 @@ Row {data-height=800}
 -----------------------------------------------------------------------
 ### Distribución espacial de registros
 ```{r}
-pal <- colorNumeric(palette = "RdYlBu", domain = datos$Total)
 
 leaflet(datos) %>%
   fitBounds(lng1 = -86, lng2 = -82, lat1 = 8, lat2 = 11) %>%
@@ -286,10 +285,6 @@ leaflet(datos) %>%
              lng = ~longitude, lat = ~latitude, intensity = ~pal(Total),
              blur = 10, max = max(datos$Total), radius = 15,
              group = "Densidad") %>%
-  addLegend("bottomright", pal = pal, values = ~Total,
-    title = "Densidad de registros",
-    opacity = 1,
-    group = "Densidad") %>%
   addPolygons(data= asp_wgs84, color = "#35b541", fill = TRUE, fillColor = "#35b541", stroke = T, weight = 3, opacity = 0.5,
               group = "ASP",
               popup = paste("Área Silvestre Protegida:", asp_wgs84$nombre_asp, "Área de conservación:", asp_wgs84$nombre_ac, sep = '<br/>')) %>%
