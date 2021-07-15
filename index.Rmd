@@ -93,7 +93,7 @@ asp_wgs84 <- asp %>%
 ucr <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/UCR.PNG"
 acoprico <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/ACOPRICO.jpeg"
 madeso <- "https://github.com/Kevinchaes/Primer-conteo-de-primates/blob/master/files/firma%20madeso.PNG"
-
+pirena <- "files/Capture.PNG"
 
 
 # area de conservacion
@@ -158,6 +158,10 @@ knitr::include_graphics("C:\\Users\\Kevin\\Documents\\R\\Primer-conteo-de-primat
 
 ```
 
+```{r, out.width = '100%'}
+knitr::include_graphics("files/Capture.PNG")
+
+```
 Autoria: 
 
 Liz Brenes Cambronero
@@ -171,6 +175,10 @@ Michael Moya Calderón
 Allan Loria Chaves
 
 Kevin Chavarria Esquivel
+
+Elaborado por:
+
+Kevin Chavarría Esquivel
 
 Row {data-height=5}
 -----------------------------------------------------------------------
