@@ -28,6 +28,7 @@ library(rgdal)
 library(rmapshaper)
 library(geojsonio)
 library(leaflet.extras)
+library(vembedr)
 
 
 ```
@@ -421,11 +422,33 @@ plot_ly(grafico,
 
 Proximamente
 =======================================================================
-Row {data-height=400}
+
+Row {data-height=50}
 -----------------------------------------------------------------------
-### Conteo de primates 2022
 
-### Gracias por su cooperación
+**Conteo de primates 2022**,   **Gracias por su cooperación**
+
+Row {data-height=50}
+-----------------------------------------------------------------------
+
+Adjuntamos algunos recursos de utilidad para el próximo conteo de primates.
+
+Row {data-height=320}
+-----------------------------------------------------------------------
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XqN79HKA52A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+
+Row {data-height=50}
+-----------------------------------------------------------------------
+Protocolos para el Primer Conteo Nacional de Primates
 
 
+Row {data-height=320}
+-----------------------------------------------------------------------
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tjVgacFUIJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Row {data-height=50}
+-----------------------------------------------------------------------
+Generalidades del Primer Conteo de Primates de Costa Rica
